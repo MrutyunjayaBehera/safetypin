@@ -10,6 +10,18 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+
+        // added for Mapbox integration
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                username = "mapbox"    // literally this string
+                password = project.findProperty("MAPBOX_DOWNLOADS_TOKEN") ?: ""
+            }
+        }
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
