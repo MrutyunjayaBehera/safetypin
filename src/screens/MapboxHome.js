@@ -2,13 +2,15 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Mapbox from '@rnmapbox/maps';
 
-Mapbox.setAccessToken('pk.eyJ1IjoiamF5ZGV2MTIzNzgiLCJhIjoiY21pNzZuMjU1MDZsMzJqczdiNjlndmNyZyJ9.BPmuHGrDkIlH8h4MaPXc-g');
 
 const MapboxHome = () => {
     return (
         <View style={styles.page}>
             <View style={styles.container}>
-                <Mapbox.MapView style={styles.map} />
+                <Mapbox.MapView
+                    style={styles.map}
+                    styleURL={Mapbox.StyleURL.SatelliteStreet}
+                />
             </View>
         </View>
     );
