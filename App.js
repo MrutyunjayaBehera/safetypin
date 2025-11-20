@@ -11,7 +11,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import MapScreen from './src/screens/HomeScreen';
+import MapboxHome from './src/screens/MapboxHome';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -33,7 +33,8 @@ function AppContent() {
         templateFileName="App.tsx"
         safeAreaInsets={safeAreaInsets}
       /> */}
-      <MapScreen />
+      {/* <MapScreen /> */}
+      <MapboxHome />
     </View>
   );
 }
