@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { PermissionsAndroid, Platform } from "react-native";
 
 const usePermissions = () => {
@@ -34,10 +33,6 @@ const usePermissions = () => {
             return false;
         }
     };
-
-    useEffect(() => {
-        requestLocationPermission();
-    }, []);
 
     return {
         requestLocationPermission
