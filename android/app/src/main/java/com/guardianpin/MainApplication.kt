@@ -1,4 +1,4 @@
-package com.safetypin
+package com.guardianpin
 
 import android.app.Application
 import com.facebook.react.PackageList
